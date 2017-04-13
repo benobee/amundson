@@ -1,0 +1,48 @@
+.app-module.lightbox{
+  position:fixed;
+  height:100%;
+  width:100%;
+  background:rgba(10,10,10,0.9);
+  top:0;
+  left:0;
+  bottom:0;
+  visibility:hidden;
+  opacity:0;
+  transition:opacity 0.4s; 
+  z-index:99999;
+  &.active{
+    visibility:visible;
+    opacity:1;
+  }
+  #lightbox-carousel{
+    border-radius: 4px;
+    width:100vw;
+    background:none; 
+    margin:0 auto;
+    position:relative;
+    overflow-y:auto;
+    &::-webkit-scrollbar { 
+      display: none; 
+    }
+    .image{
+      background-size:contain;
+      background-position:center center;
+      background-repeat:no-repeat;
+      min-height:80vh;
+    }
+  }
+  .close{
+    position:absolute;
+    color:white;
+    right:0;
+    padding:1.2em;
+    cursor:pointer;
+    opacity:0.6;
+    transition:0.4s;
+    font-size:1.5em;
+    z-index:999;
+    &:hover{
+      opacity:1;
+    }
+  }
+}
