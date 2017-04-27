@@ -10,7 +10,7 @@
 const Geo = {
 	init(){
 		this.geoQuery();
-
+		
 		const productPage = this.checkProductPage();
 
 		/* if DOM element is on page run scripts*/
@@ -45,8 +45,6 @@ const Geo = {
 					// marketplace = "f845557f-a65d-4188-b976-ac9cabc884a8";
 				}
 
-				console.log(`loading ${marketplace} ${data.country}`);
-
 				const productPage = this.checkProductPage();
 
 				this.query = data.country;
@@ -71,6 +69,9 @@ const Geo = {
 					$('head').append(script);
 
 				}
+			},
+			error: (error) => {
+				console.error(error);
 			}
 		});
 	},
@@ -81,7 +82,7 @@ const Geo = {
 		 * to cart button
 		*/
 
-		const isApproved = (country == "US" || country == "CA");
+		const isApproved = (country == "US");
 
 		if(!isApproved) {
 			this.renderDealerButton();

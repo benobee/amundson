@@ -14,6 +14,7 @@ import filters from "./filters";
 import lightbox from "./lightbox";
 import cart from "./cart";
 import geo from "./geo_quivers";
+import navbar from "./navbar";
 
 export {
 	animation,
@@ -23,5 +24,6 @@ export {
 	filters,
 	lightbox,
 	cart,
-	geo
+	geo,
+	navbar
 }

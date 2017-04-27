@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import Isotope from 'isotope-layout';
 
 const filters = {
 	init(){

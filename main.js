@@ -1,6 +1,6 @@
-import * as core from "./imports/modules/index.js";
+import * as core from "./src/modules/index.js";
 import $ from "jquery";
-import Events from './imports/modules/pubsub.js';
+import Events from './src/modules/pubsub.js';
 
 const css = require("./main.less");
 
@@ -11,6 +11,8 @@ class App_Build {
         core.filters.init();
         core.cart.init();
         core.geo.init();
+        core.navbar.init();
+        this.core = core;
     }
 };
 

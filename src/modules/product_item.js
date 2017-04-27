@@ -87,8 +87,6 @@ const product = {
 
     let array = $('.owl-carousel .image').toArray();
 
-    console.log(array);
-
     $.each(array, (i, item) => {
         let x = 0;
         let y = 0;
